@@ -1,0 +1,34 @@
+[uWSGI] getting INI configuration from psicocms.uwsgi.ini
+*** Starting uWSGI 2.0.8 (64bit) on [Wed Nov  5 15:12:15 2014] ***
+compiled with version: 4.6.3 on 05 November 2014 11:47:15
+os: Linux-3.2.0-45-generic #70-Ubuntu SMP Wed May 29 20:12:06 UTC 2013
+nodename: OrdinePsichia
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/oo/psicocms/private/nginx
+writing pidfile to /home/oo/psicocms/private/nginx/cms.pid
+detected binary path: /home/oo/.virtualenvs/psicocms/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/oo/psicocms/cms/
+your processes number limit is 15885
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/oo/psicocms/private/nginx/cms.sock fd 3
+Python version: 2.7.3 (default, Feb 27 2014, 20:09:21)  [GCC 4.6.3]
+Set PythonHome to /home/oo/.virtualenvs/psicocms/
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x22313a0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291072 bytes (284 KB) for 3 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x22313a0 pid: 7688 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7688)
+spawned uWSGI worker 1 (pid: 7689, cores: 1)
+spawned uWSGI worker 2 (pid: 7690, cores: 1)
+spawned uWSGI worker 3 (pid: 7691, cores: 1)
+[pid: 7690|app: 0|req: 1/1] 77.119.131.174 () {40 vars in 860 bytes} [Wed Nov  5 14:12:26 2014] GET / => generated 2366 bytes in 186 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
