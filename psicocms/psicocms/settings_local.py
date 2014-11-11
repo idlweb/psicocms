@@ -1,4 +1,4 @@
-from psicocms.settings import *
+from psicocms.psicocms.settings import *
 
 DEBUG = True
 TEMPLATE_DEBUG = True
@@ -6,7 +6,7 @@ TEMPLATE_DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
     }
 }
 

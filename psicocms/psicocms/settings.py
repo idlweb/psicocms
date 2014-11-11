@@ -7,13 +7,14 @@ https://docs.djangoproject.com/en/1.6/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
+import os
 
 # site ID
 SITE_ID = 1
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+CONFIG_ROOT = os.path.abspath(os.path.dirname((os.path.dirname(__file__))))
+PROJECT_ROOT = os.path.abspath(os.path.dirname(CONFIG_ROOT))
+REPOSITORY_ROOT = os.path.abspath(os.path.dirname(PROJECT_ROOT))
 
 
 # Quick-start development settings - unsuitable for production
@@ -49,6 +50,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django_comments',
     'django.contrib.sitemaps',
+    'django_extensions',
     'south',
     'mptt',
     'tagging',
@@ -97,3 +99,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join( REPOSITORY_ROOT, 'media').replace('\\','/')
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'sitestatic')
