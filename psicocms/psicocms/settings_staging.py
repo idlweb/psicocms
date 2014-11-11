@@ -3,7 +3,7 @@ from psicocms.psicocms.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-WSGI_APPLICATION = 'psicocms.psicocms.django.wsgi.application'
+WSGI_APPLICATION = 'psicocms.psicocms.wsgi_staging.application'
 
 DATABASES = {
     'default': {

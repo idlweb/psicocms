@@ -111,9 +111,14 @@ def update_uwsgi_conf():
     Update the uwsgi configuration and start it
     """
 
+    fastprint("Update uwsgi configuration ...")
     with lcd(os.path.join(env.local_repo_root, 'nginx')):
         nginx_dir = os.path.join(env.domain_root, 'private', 'nginx')
-        run('mkdir -p %s' % nginx_dir)
+        
+        if not exists(nginx_dir):
+            # create remote directory for nginx configuration
+            run('mkdir -p %s' % nginx_dir)
+
         with cd(nginx_dir):
             source = '%(project)s.uwsgi.ini' % env
             dest = '%(project)s.uwsgi.ini' % env
