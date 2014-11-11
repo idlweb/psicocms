@@ -71,7 +71,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'cms.urls'
+ROOT_URLCONF = 'psicocms.psicocms.urls'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
