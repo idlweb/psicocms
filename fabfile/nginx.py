@@ -111,7 +111,7 @@ def update_uwsgi_conf():
     Update the uwsgi configuration and start it
     """
 
-    fastprint("Update uwsgi configuration ...")
+    fastprint("Update uwsgi configuration ...", show_prefix=True)
     with lcd(os.path.join(env.local_repo_root, 'nginx')):
         nginx_dir = os.path.join(env.domain_root, 'private', 'nginx')
         
