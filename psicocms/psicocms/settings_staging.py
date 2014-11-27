@@ -3,7 +3,7 @@ from psicocms.psicocms.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = [ 'www.psicologipuglia.it', ]
+ALLOWED_HOSTS = [ 'cms.psicologipuglia.it', ]
 
 WSGI_APPLICATION = 'psicocms.psicocms.wsgi_staging.application'
 
