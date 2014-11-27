@@ -50,6 +50,8 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django_comments',
     'django.contrib.sitemaps',
+    'django_cas',
+    'mama_cas',
     'django_extensions',
     'south',
     'mptt',
@@ -71,6 +73,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_cas.middleware.CASMiddleware',
 )
 
 ROOT_URLCONF = 'psicocms.psicocms.urls'
@@ -109,3 +112,7 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'sitestatic')
+
+CAS_IGNORE_REFERER = False
+CAS_LOGOUT_COMPLETELY = True
+CAS_SERVER_URL = '' # this must be set in the settings of your deploy

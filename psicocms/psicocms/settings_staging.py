@@ -3,7 +3,7 @@ from psicocms.psicocms.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = [ 'cms.psicologipuglia.it', ]
+ALLOWED_HOSTS = [ 'www.psicologipuglia.it', ]
 
 WSGI_APPLICATION = 'psicocms.psicocms.wsgi_staging.application'
 
@@ -19,3 +19,5 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+CAS_SERVER_URL = 'http://%s/cas/' % ALLOWED_HOSTS[0] # this is the url of local service

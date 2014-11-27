@@ -10,3 +10,4 @@ DATABASES = {
     }
 }
 
+CAS_SERVER_URL = 'http://localhost:8080/cas/' # this must be the local url for this project
