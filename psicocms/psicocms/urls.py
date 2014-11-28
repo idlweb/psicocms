@@ -12,8 +12,8 @@ urlpatterns = patterns('',
 #    url(r'^weblog/', include('zinnia.urls', namespace='zinnia')),
     url(r'^comments/', include('django_comments.urls')),
 
-    url(r'^accounts/login/$', 'django_cas.views.login', name='cas_login'),
-    url(r'^accounts/logout/$', 'django_cas.views.logout', name='cas_logout'),
+    url(r'^accounts/login/$', 'django_cas.views.login', name='cms_login'),
+    url(r'^accounts/logout/$', 'django_cas.views.logout', name='cms_logout'),
 
     url(r'', include('zinnia.urls', namespace='zinnia')),
 

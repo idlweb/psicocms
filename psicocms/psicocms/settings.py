@@ -66,6 +66,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'zinnia.context_processors.version',  # Optional
 )
 
+
+TEMPLATE_DIRS = (
+    os.path.join(CONFIG_ROOT, 'templates'),
+)
+
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
