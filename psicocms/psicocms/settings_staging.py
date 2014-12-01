@@ -7,7 +7,7 @@ ALLOWED_HOSTS = [ 'cms.psicologipuglia.it', ]
 
 WSGI_APPLICATION = 'psicocms.psicocms.wsgi_staging.application'
 
-MEDIA_ROOT = ( os.path.join(REPOSITORY_ROOT, "public", "static" ))
+MEDIA_ROOT = ( os.path.join(REPOSITORY_ROOT, "public", "media" ))
 STATIC_ROOT = ( os.path.join(REPOSITORY_ROOT, "public", "static" ))
 
 DATABASES = {
