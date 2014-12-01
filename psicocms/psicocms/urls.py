@@ -14,10 +14,11 @@ urlpatterns = patterns('',
 
     url(r'^accounts/login/$', 'django_cas.views.login', name='cms_login'),
     url(r'^accounts/logout/$', 'django_cas.views.logout', name='cms_logout'),
-
-    url(r'', include('zinnia.urls', namespace='zinnia')),
     
     url(r'^admin_tools/', include('admin_tools.urls')),
+
+    url(r'', include('zinnia.urls', namespace='zinnia')),
+
     
 )
 
