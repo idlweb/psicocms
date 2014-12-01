@@ -15,3 +15,7 @@ psycopg2==2.5.1
 django-extensions==1.4.6
 -e git+https://github.com/jbittel/django-mama-cas.git#egg=mama-cas
 -e git+https://github.com/fspegni/django-cas.git#egg=django-cas
+django-admin-tools==0.5.2
+zinnia-theme-foundation==1.0.1
+
+

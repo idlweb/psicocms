@@ -16,7 +16,9 @@ urlpatterns = patterns('',
     url(r'^accounts/logout/$', 'django_cas.views.logout', name='cms_logout'),
 
     url(r'', include('zinnia.urls', namespace='zinnia')),
-
+    
+    url(r'^admin_tools/', include('admin_tools.urls')),
+    
 )
 
 urlpatterns += patterns('', (r'^cas/', include('mama_cas.urls')))
@@ -37,3 +39,5 @@ urlpatterns += patterns(
         {'sitemaps': sitemaps}),
     url(r'^sitemap-(?P<section>.+)\.xml$', 'sitemap',
         {'sitemaps': sitemaps}),)
+
+

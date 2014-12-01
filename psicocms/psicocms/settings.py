@@ -41,6 +41,10 @@ INSTALLED_APPS = (
     #'django.contrib.messages',
     #'django.contrib.staticfiles',
     #-----da zinnia
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.sites',
@@ -56,6 +60,7 @@ INSTALLED_APPS = (
     'south',
     'mptt',
     'tagging',
+    'zinnia_foundation', # BEFORE the "zinnia" app
     'zinnia',
 )
 
@@ -81,6 +86,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_cas.middleware.CASMiddleware',
 )
+
+ZINNIA_ENTRY_CONTENT_TEMPLATES = [
+	('zinnia/fullwidth_entry_detail.html','Fullwidth template'),
+	('zinnia/_short_entry_detail.html','Short entry template'),
+]
 
 ROOT_URLCONF = 'psicocms.psicocms.urls'
 
@@ -122,3 +132,9 @@ STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'sitestatic')
 CAS_IGNORE_REFERER = False
 CAS_LOGOUT_COMPLETELY = True
 CAS_SERVER_URL = '' # this must be set in the settings of your deploy
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+)
