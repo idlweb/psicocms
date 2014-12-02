@@ -60,7 +60,7 @@ INSTALLED_APPS = (
     'south',
     'mptt',
     'tagging',
-    'zinnia_foundation', # BEFORE the "zinnia" app
+#    'zinnia_foundation', # BEFORE the "zinnia" app
     'zinnia',
 )
 

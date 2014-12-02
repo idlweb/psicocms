@@ -1,6 +1,9 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
+
+from zinnia.views.channels import EntryChannel
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -16,6 +19,9 @@ urlpatterns = patterns('',
     url(r'^accounts/logout/$', 'django_cas.views.logout', name='cms_logout'),
     
     url(r'^admin_tools/', include('admin_tools.urls')),
+
+    url(r'^psicologi/$', EntryChannel.as_view(query='category:psicologi')), 
+    url(r'^psichiatri/$', EntryChannel.as_view(query='category:psichiatri')),    
 
     url(r'', include('zinnia.urls', namespace='zinnia')),
 
