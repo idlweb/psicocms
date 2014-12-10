@@ -21,4 +21,4 @@ DATABASES = {
     }
 }
 
-CAS_SERVER_URL = 'http://%s/cas/' % ALLOWED_HOSTS[0] # this is the url of local service
+CAS_SERVER_URL = 'http://oo.psicologipuglia.it/cas/'

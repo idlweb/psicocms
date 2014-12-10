@@ -16,6 +16,5 @@ django-extensions==1.4.6
 -e git+https://github.com/jbittel/django-mama-cas.git#egg=mama-cas
 -e git+https://github.com/fspegni/django-cas.git#egg=django-cas
 django-admin-tools==0.5.2
-#zinnia-theme-foundation==1.0.1
 git+https://github.com/Fantomas42/django-blog-zinnia.git
-git+https://github.com/django-blog-zinnia/zinnia-theme-foundation.git
+git+git://github.com/gustavi/zinnia-theme-foundation.git

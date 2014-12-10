@@ -54,13 +54,13 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django_comments',
     'django.contrib.sitemaps',
-    'django_cas',
-    'mama_cas',
+    'django_cas_ng',
+#    'mama_cas',
     'django_extensions',
     'south',
     'mptt',
     'tagging',
-#    'zinnia_foundation', # BEFORE the "zinnia" app
+    'zinnia_foundation', # BEFORE the "zinnia" app
     'zinnia',
 )
 
@@ -77,6 +77,12 @@ TEMPLATE_DIRS = (
 )
 
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'django_cas_ng.backends.CASBackend',
+)
+
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,7 +90,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_cas.middleware.CASMiddleware',
 )
 
 ZINNIA_ENTRY_CONTENT_TEMPLATES = [
