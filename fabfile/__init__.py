@@ -193,7 +193,7 @@ def deploy():
 # in the current deploy model, this application is not responsible for updating
 # the global nginx configuration, but only the local uwsgi configuration
         execute(nginx.update_uwsgi_conf)
-#        execute(nginx.update_conf)
+        execute(nginx.update_conf)
 #        execute(nginx.start)
         # adjust filesystem permissions
         execute(adjust_permissions)

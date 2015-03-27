@@ -5,7 +5,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [ 'formazione.psicologipuglia.it', ]
 
-WSGI_APPLICATION = 'psicocms.psicocms.wsgi_staging.application'
+WSGI_APPLICATION = 'psicocms.psicocms.wsgi_production.application'
 
 MEDIA_ROOT = os.path.join(REPO_ROOT, "..", "public", "media" )
 STATIC_ROOT = os.path.join(REPO_ROOT, "..", "public", "static" )

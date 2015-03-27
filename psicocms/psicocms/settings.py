@@ -12,9 +12,14 @@ import os
 # site ID
 SITE_ID = 1
 
-CONFIG_ROOT = os.path.abspath(os.path.dirname((os.path.dirname(__file__))))
-PROJECT_ROOT = os.path.abspath(os.path.dirname(CONFIG_ROOT))
-REPOSITORY_ROOT = os.path.abspath(os.path.dirname(PROJECT_ROOT))
+#CONFIG_ROOT = os.path.abspath(os.path.dirname((os.path.dirname(__file__))))
+#PROJECT_ROOT = os.path.abspath(os.path.dirname(CONFIG_ROOT))
+#REPOSITORY_ROOT = os.path.abspath(os.path.dirname(PROJECT_ROOT))
+# root directory for this Django project (on the server machine)
+MAIN_APP_ROOT = os.path.join(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.join(os.path.dirname(MAIN_APP_ROOT))
+REPO_ROOT = os.path.abspath(os.path.dirname(PROJECT_ROOT))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -59,7 +64,7 @@ INSTALLED_APPS = (
     'south',
     'mptt',
     'tagging',
-    'zinnia_foundation', # BEFORE the "zinnia" app
+#    'zinnia_foundation', # BEFORE the "zinnia" app
     'zinnia',
 )
 
@@ -72,7 +77,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 
 TEMPLATE_DIRS = (
-    os.path.join(CONFIG_ROOT, 'templates'),
+#    os.path.join(CONFIG_ROOT, 'templates'),
+    os.path.join(PROJECT_ROOT, 'templates'),
 )
 
 
@@ -124,14 +130,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join( REPOSITORY_ROOT, 'media').replace('\\','/')
+STATICFILES_DIRS = (
+    os.path.join(MAIN_APP_ROOT, 'static'),
+)
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'sitestatic')
+MEDIA_ROOT = os.path.join(REPO_ROOT, 'public', 'media')
+STATIC_ROOT = os.path.join(REPO_ROOT, 'public', 'static')
 
 CAS_IGNORE_REFERER = False
 CAS_LOGOUT_COMPLETELY = True

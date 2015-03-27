@@ -6,7 +6,7 @@ from django.conf.urls import patterns, include, url
 
 from django.conf import settings
 
-from openordini.openordini.urls import *
+from psicocms.psicocms.urls import *
 
 urlpatterns += patterns('',
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),

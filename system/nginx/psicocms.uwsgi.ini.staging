@@ -1,0 +1,28 @@
+# mysite_uwsgi.ini file
+[uwsgi]
+
+# Django-related settings
+# the base directory (full path)
+chdir           = /home/oo/formazione.psicologipuglia.it/private/
+# Django's wsgi file
+module          = psicocms.psicocms.wsgi_staging
+# the virtualenv (full path)
+home            = /home/oo/formazione.psicologipuglia.it/private/venv/
+
+uid 		= oo
+gid		= www-data
+chmod-socket	= 666
+
+# process-related settings
+# master
+master          = true
+# maximum number of worker processes
+processes       = 3
+# the pid of the master process
+pidfile         = /home/oo/formazione.psicologipuglia.it/private/nginx/cms.pid
+# the socket (use the full path to be safe
+socket          = /home/oo/formazione.psicologipuglia.it/private/nginx/cms.sock
+# ... with appropriate permissions - may be needed
+# chmod-socket    = 664
+# clear environment on exit
+vacuum          = true
