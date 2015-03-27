@@ -37,7 +37,7 @@ VIRTUALENV_ROOT = os.path.join(DOMAIN_ROOT, 'private', 'venv')
 # the root directory for project-specific files (on the server machine)
 PROJECT_ROOT = os.path.join(DOMAIN_ROOT, 'private', PROJECT_NAME)
 # import path of Django settings module for the production environment
-DJANGO_SETTINGS_MODULE = '%(project)s.settings_production' % {'project': PROJECT_NAME}
+DJANGO_SETTINGS_MODULE = '%(project)s.%(project)s.settings_production' % {'project': PROJECT_NAME}
 # Directory where static files should be collected.  This MUST equal the value
 # of ``STATIC_ROOT`` attribute of the Django settings module used on the server.
 STATIC_ROOT =  os.path.join(DOMAIN_ROOT, 'public', 'static')
