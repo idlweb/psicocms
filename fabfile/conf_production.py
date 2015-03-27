@@ -1,7 +1,7 @@
 import os
 
 # IP/domain name of the production server
-SERVER_MACHINE = 'www.yourdomain_or_yourip.here' ## CHANGEME!
+SERVER_MACHINE = 'formazione.psicologipuglia.it' ## CHANGEME!
 # Python interpreter executable to use on virtualenv creation
 PYTHON_BIN = 'python' #pyhton 2.7
 PYTHON_PREFIX = '' # e.g. ``/usr``, ``/usr/local``; leave empty for default.
@@ -17,7 +17,7 @@ RSYNC_EXCLUDE = (
 PROJECT_NAME = 'psicocms' ## CHANGEME!
 # a unique identifier for this web application instance
 # usually it's set to the primary domain from which the web application is accessed
-APP_DOMAIN = 'www.yourdomain.here' ## CHANGEME!
+APP_DOMAIN = 'formazione.psicologipuglia.it' ## CHANGEME!
 # filesystem location of project's repository on the local machine
 LOCAL_REPO_ROOT =  os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
 # filesystem location of Django project's files on the local machine

@@ -3,7 +3,7 @@ Pillow==2.6.1
 South==1.0.1
 argparse==1.2.1
 beautifulsoup4==4.3.2
-#django-blog-zinnia==0.14.2
+django-blog-zinnia==0.14.3
 django-contrib-comments==1.5
 django-mptt==0.6.1
 django-tagging==0.3.3
@@ -13,8 +13,9 @@ pytz==2014.7
 uWSGI==2.0.8
 psycopg2==2.5.1
 django-extensions==1.4.6
--e git+https://github.com/jbittel/django-mama-cas.git#egg=mama-cas
--e git+https://github.com/fspegni/django-cas.git#egg=django-cas
+#-e git+https://github.com/jbittel/django-mama-cas.git#egg=mama-cas
+#-e git+https://github.com/fspegni/django-cas.git#egg=django-cas
 django-admin-tools==0.5.2
-git+https://github.com/Fantomas42/django-blog-zinnia.git
+django-cas-ng==3.1.0
 git+git://github.com/gustavi/zinnia-theme-foundation.git
+

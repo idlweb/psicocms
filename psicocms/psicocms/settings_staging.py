@@ -3,7 +3,7 @@ from psicocms.psicocms.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = [ 'cms.psicologipuglia.it', ]
+ALLOWED_HOSTS = [ 'formazione.psicologipuglia.it', ]
 
 WSGI_APPLICATION = 'psicocms.psicocms.wsgi_staging.application'
 
@@ -21,4 +21,4 @@ DATABASES = {
     }
 }
 
-CAS_SERVER_URL = 'http://oo.psicologipuglia.it/cas/'
+CAS_SERVER_URL = 'http://ordine.psicologipuglia.it/cas/'

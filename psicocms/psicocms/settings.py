@@ -55,7 +55,6 @@ INSTALLED_APPS = (
     'django_comments',
     'django.contrib.sitemaps',
     'django_cas_ng',
-#    'mama_cas',
     'django_extensions',
     'south',
     'mptt',

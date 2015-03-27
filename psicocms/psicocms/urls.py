@@ -28,8 +28,6 @@ urlpatterns = patterns('',
     
 )
 
-#urlpatterns += patterns('', (r'^cas/', include('mama_cas.urls')))
-
 from zinnia.sitemaps import TagSitemap
 from zinnia.sitemaps import EntrySitemap
 from zinnia.sitemaps import CategorySitemap

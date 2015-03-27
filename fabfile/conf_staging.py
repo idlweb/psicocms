@@ -1,8 +1,9 @@
 import os
 
 # IP/domain name of the staging server
-SERVER_MACHINE = '5.249.143.113' ## CHANGEME!
-# Python interpreter executable to use on virtualenv creation
+#SERVER_MACHINE = '5.249.143.113' ## CHANGEME!
+SERVER_MACHINE = '151.80.117.164'
+# Python interpreter executable to use on virtualenv creationa
 PYTHON_BIN = 'python' #pyhton 2.7
 PYTHON_PREFIX = '' # e.g. ``/usr``, ``/usr/local``; leave empty for default.
 PYTHON_FULL_PATH = "%s/bin/%s" % (PYTHON_PREFIX, PYTHON_BIN) if PYTHON_PREFIX else PYTHON_BIN
@@ -17,7 +18,7 @@ RSYNC_EXCLUDE = (
 PROJECT_NAME = 'psicocms' ## CHANGEME!
 # a unique identifier for this web application instance
 # usually it's set to the primary domain from which the web application is accessed
-APP_DOMAIN = 'cms.psicologipuglia.it' ## CHANGEME!
+APP_DOMAIN = 'formazione.psicologipuglia.it' ## CHANGEME!
 # filesystem location of project's repository on the local machine
 LOCAL_REPO_ROOT =  os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
 # filesystem location of Django project's files on the local machine

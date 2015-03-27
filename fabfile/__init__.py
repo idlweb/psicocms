@@ -68,8 +68,38 @@ def production():
     """
     Deploy to the production server(s).
     """
+    # import staging's conf module
+    import conf_production as conf
+    ## set up Fabric global environment dictionary
     env.environment = 'production'
-    abort('Production deployment not yet implemented.')
+    env.server = conf.SERVER_MACHINE    
+    env.project = conf.PROJECT_NAME
+    env.app_domain = conf.APP_DOMAIN
+    env.local_repo_root = conf.LOCAL_REPO_ROOT
+    env.local_project_root = conf.LOCAL_PROJECT_ROOT
+    env.rsync_exclude = conf.RSYNC_EXCLUDE
+    env.python = conf.PYTHON_FULL_PATH   
+    env.web_user = conf.WEB_USER
+    env.web_user_hostkey = conf.WEB_USER_HOSTKEY
+    env.web_root = conf.WEB_ROOT
+    env.domain_root = conf.DOMAIN_ROOT
+    env.virtualenv_root = conf.VIRTUALENV_ROOT
+    env.project_root = conf.PROJECT_ROOT
+    env.settings = conf.DJANGO_SETTINGS_MODULE
+    env.static_root = conf.STATIC_ROOT
+    env.provision_packages = conf.PROVISION_PACKAGES
+    # PostgreSQL
+    env.postgres_conf_dir = conf.POSTGRES_CONF_DIR
+    env.postgres_controller = conf.POSTGRES_CONTROLLER
+    env.db_user = conf.DB_USER 
+    env.db_name = conf.DB_NAME
+    # role definitions
+    env.roledefs = {                   
+    'admin': ['root@%(server)s' % env],
+    'web': ['%(web_user)s@%(server)s' % env],
+    'db': ['root@%(server)s' % env],
+    }
+ 
 
 
 ## Macro-tasks
