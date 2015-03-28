@@ -22,3 +22,5 @@ DATABASES = {
 }
 
 CAS_SERVER_URL = 'http://ordine.psicologipuglia.it/cas/'
+
+MAMA_CAS_ENABLE_SINGLE_SIGN_OUT = True

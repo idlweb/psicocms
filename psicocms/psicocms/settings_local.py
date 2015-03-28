@@ -13,6 +13,9 @@ DATABASES = {
 
 CAS_SERVER_URL = 'http://localhost:8000/cas/' # this must be the local url for the project with CAS authentication
 
+MAMA_CAS_ENABLE_SINGLE_SIGN_OUT = True
+
 ALLOWED_HOSTS = [ 'localhost', ]
 
 ROOT_URLCONF = 'psicocms.psicocms.urls_local'
+

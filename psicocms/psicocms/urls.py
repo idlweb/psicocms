@@ -1,10 +1,13 @@
 from django.conf.urls import patterns, include, url
+from django.contrib.auth.decorators import login_required
 
 from django.contrib import admin
 
 from zinnia.views.channels import EntryChannel
 
 admin.autodiscover()
+
+admin.site.login = login_required(admin.site.login)
 
 urlpatterns = patterns('',
     # Examples:
