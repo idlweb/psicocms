@@ -26,6 +26,11 @@ urlpatterns = patterns('',
     url(r'^psicologi/$', EntryChannel.as_view(query='category:psicologi')), 
     url(r'^psichiatri/$', EntryChannel.as_view(query='category:psichiatri')),    
 
+    url(r'^psicologi-forensi/$', EntryChannel.as_view(query='category:psicologi_forensi')), 
+    url(r'^psicologi-clinici/$', EntryChannel.as_view(query='category:psicologi_clinici')),    
+    url(r'^psicologi_del_lavoro/$', EntryChannel.as_view(query='category:psicologi_del_lavoro')),    
+
+
     url(r'', include('zinnia.urls', namespace='zinnia')),
 
     
