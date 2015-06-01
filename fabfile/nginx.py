@@ -183,6 +183,7 @@ def stop_uwsgi():
 
                 pid_file = "./private/nginx/%(project)s.pid" % env
 
+
                 if exists(pid_file):
                     run_venv('uwsgi --stop %s' % pid_file)
 

@@ -2,7 +2,7 @@
 
 # the upstream component nginx needs to connect to
 upstream cms {
-    server unix:///home/oo/formazione.psicologipuglia.it/private/nginx/cms.sock;
+    server unix:///home/oo/formazione.psicologipuglia.it/private/nginx/psicocms.sock;
 }
 
 # configuration of the server

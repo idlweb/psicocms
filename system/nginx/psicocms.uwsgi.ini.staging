@@ -19,9 +19,9 @@ master          = true
 # maximum number of worker processes
 processes       = 3
 # the pid of the master process
-pidfile         = /home/oo/formazione.psicologipuglia.it/private/nginx/cms.pid
+pidfile         = /home/oo/formazione.psicologipuglia.it/private/nginx/psicocms.pid
 # the socket (use the full path to be safe
-socket          = /home/oo/formazione.psicologipuglia.it/private/nginx/cms.sock
+socket          = /home/oo/formazione.psicologipuglia.it/private/nginx/psicocms.sock
 # ... with appropriate permissions - may be needed
 # chmod-socket    = 664
 # clear environment on exit
